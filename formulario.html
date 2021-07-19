@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Tipos de Input</title>
+</head>
+<body>
+    <header>
+        <h1>Formulario Tipos de Input</h1>
+    </header>
+    <section>
+        <form>
+            <div class="grupo-formulario">
+                <label>Cor</label>
+                <input type="color"> <!-- input tipo cor -->
+            </div>
+            <div class="grupo-formulario">
+                <label>Data</label>
+                <input type="date"> <!-- input tipo de data -->
+            </div>
+            <div class="grupo-formulario">
+                <label>Horario e dia</label>
+                <input type="datetime-local"> <!-- input tipo de data e horario -->
+            </div>
+            <div class="grupo-formulario">
+                <label>Email</label>
+                <input type="email"> <!-- input tipo de email -->
+            </div>
+            <div class="grupo-formulario">
+                <label>Mes</label>
+                <input type="month"> <!-- input tipo somente mes -->
+            </div>
+            <div class="grupo-formulario">
+                <label>Numero</label>
+                <input type="number" min="1" max="100" step="10"> <!-- input tipo de numero -->
+            </div>
+            <div class="grupo-formulario">
+                <label>Alcance</label>
+                <input type="text" id="textinput">
+                <input type="range" min="0" max="100" step="2"
+                onchange="updateTextInput(this.value)"> <!-- input tipo de alcance,
+                    criamos uma função para testar o range
+                -->
+                <script>
+                    function updateTextInput (num) {
+                        document.getElementById("textinput").value = num;
+                    }
+                </script>
+            </div>
+            <div class="grupo-formulario">
+                <label>Busca</label>
+                <input type="search"> <!-- input tipo de Buscar -->
+            </div>
+            <div class="grupo-formulario">
+                <label>Hora</label>
+                <input type="time"> <!-- input tipo de Hora -->
+            </div>
+            <div class="grupo-formulario">
+                <label>URL</label>
+                <input type="url"> <!-- input tipo de URL -->
+            </div>
+            <div class="grupo-formulario">
+                <label>Semana</label>
+                <input type="week"> <!-- input tipo dia da semana -->
+            </div>
+            <div class="grupo-formulario">
+                <label>Lista</label>
+                <input list="codigos" name="code" x-moz-errormessage="Customize o erro" title="customize o erro" required>
+                <!-- esse input traz uma lista -->
+                <detalist id="codigos">
+                    <option value="Javascript"></option>
+                    <option value="PHP"></option>
+                    <option value="Java"></option>
+                    <option value="Ruby"></option>
+                    <option value="Python"></option>
+                </detalist>
+            </div>
+            <button>Enviar</button>
+        </form>
+    </section>
+</body>
+</html>
