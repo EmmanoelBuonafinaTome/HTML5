@@ -80,5 +80,71 @@
             <button>Enviar</button>
         </form>
     </section>
+    <section> <!-- Trabalhando com saidas no HTML5 -->
+        <h1>Output</h1>
+        <form oninput="x.value=parseInt(a.value) + parseInt(b.value),
+        y.value = parseInt(a.value)">
+            0
+            <input type="range" id="a" name="a" value="50" min="0" max="100">
+            100
+            +
+            <input type="text" name="b" value="0">
+            =
+            <output name="x"></output>
+            <output name="y"></output>
+        </form>
+    </section>
+    <section> <!-- Vendo a forma de funcionamento da mecanica de auto complemento HTML5 -->
+        <h1>Auto complemento</h1>
+        <form autocomplete="off">
+            <div class="grupo-formulario">
+                <input type="text" name="pnome" placeholder="Nome">
+            </div>
+           <div class="grupo-formulario">
+                <input type="text" name="snome" placeholder="Sobrenome">
+           </div>
+           <div class="grupo-formulario">
+                <input type="email" name="email" placeholder="Email" autocomplete="off">
+            </div>
+           <button>Enviar</button>
+        </form>
+    </section>
+    <section> <!-- Vendo a forma de funcionamento da mecanica de autofocus e novalidate HTML5 -->
+        <h1>autofocus e novalidate atributo</h1>
+        <form autocomplete="off" novalidate>
+            <div class="grupo-formulario">
+                <input type="text" name="pnome" placeholder="Nome" required>
+            </div>
+           <div class="grupo-formulario">
+                <input type="text" name="snome" placeholder="Sobrenome">
+           </div>
+           <div class="grupo-formulario">
+                <input type="email" name="email" placeholder="Email"
+                autocomplete="off" novalidate autofocus>
+            </div>
+           <button>Enviar</button>
+        </form>
+    </section>
+    <section> <!-- Vendo a forma de funcionamento da mecanica de input 
+        fora de formularios e como brincar com o button -->
+        <h1>Input fora do form</h1>
+        <form id="form1" autocomplete="off" method="GET">
+            <div class="grupo-formulario">
+                <input type="text" name="pnome" placeholder="Nome" required>
+            </div>
+           <div class="grupo-formulario">
+                <input type="text" name="snome" placeholder="Sobrenome" required>
+           </div>
+           <div class="grupo-formulario">
+                <input type="email" name="email" placeholder="Email"
+                autocomplete="off">
+            </div>
+           <button>Enviar</button>
+           <button formnovalidate>Enviar sem validar</button>
+           <button formnovalidate formmethod="POST">Enviar mudando o metodo</button>
+           <button formnovalidate formaction="post.php">Enviar mudando ação</button>
+        </form>
+        <input type="color" name="color" form="form1">
+    </section>
 </body>
 </html>
