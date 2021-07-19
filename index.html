@@ -23,22 +23,10 @@
     <script>document.createElement("myTag")</script> <!-- Criando uma tag javascript,
         essa tag serve para ajudar buscadores mais antigos a entender o seu site.
     -->
-    <style>
-        header, section, footer, nav, main, article, figure {
-        display: block;
-        }
-        myTag {
-            display: block;
-            background-color: #ddd;
-            padding: 50px;
-            font-size: 30px;
-        }
-        /*
-            Já esse style serve para mesma coisa, ajudar buscadores 
-            mais antigos a indentificar seu site,
-            e como podemos ver estou chamando a tag javascript para ajudar 
-        */
-    </style>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- A tag link serve para fazer links de aquivos para esse, neste caso o rel e o estilo do aquivo,
+    type é o tipo e o href e o caminho deste arquivo -->
+    <!-------------------------------------------------------------------------------------->
     <!--[if lt IE 9]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -46,6 +34,43 @@
     <title>Aprendendo HTML5</title>
 </head>
 <body>
-    <myTag>Testando</myTag> <!-- Chamando a tag e aplicando ela -->
+    <header> <!-- Cabeçario -->
+        <h1>Titulo Principal</h1>
+        <h2>Titulo Secundario</h2>
+        <nav> <!-- Menu de Navegação -->
+            <ul class="menu"> <!-- Lista -->
+                <li><a href="index.html">Home</a></li> <!-- Item da Lista -->
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="contact.html">Contato</a></li>
+                <li><a href="https://github.com/EmmanoelBuonafinaTome">GitHub</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main> <!-- main só pode ter um no site-->
+    <section> <!-- section serve para separar o conteudo em sessoes -->
+        <article> <!-- Artigo -->
+            <header>
+                <h1>Titulo do conteudo</h1>
+                <p>Descrição deste conteudo</p>
+            </header>
+            ... conteudo ... 
+            <footer> <!-- Roda pé -->
+                <small><a href="news.html">Ver mais ...</a></small>
+                <!-- small Textos menores -->
+            </footer>
+        </article>
+    </section>
+    <aside> <!-- sidebar serve para deixar link, 
+            textos ou publicidade nas laterais do site -->
+        <h3>Sidebar</h3>
+        <ul> <!-- Lista -->
+            <li><a href="#">Link 1</a></li> <!-- Item da Lista -->
+            <li><a href="#">Link 2</a></li>
+            <li><a href="#">Link 3</a></li>
+        </ul>
+    </aside>
+    </main>
+    <!-- ... conteudo ...
+    <myTag>Testando</myTag>  Chamando a tag e aplicando ela -->
 </body>
 </html>

@@ -1,0 +1,21 @@
+header, section, footer, nav, main, article, figure {
+    display: block;
+    }
+
+/* myTag {
+        display: block;
+        background-color: #ddd;
+        padding: 50px;
+        font-size: 30px;
+}
+*/
+
+/*
+    Já esse codigo a cima serve para mesma coisa, ajudar buscadores 
+    mais antigos a indentificar seu site,
+    e como podemos ver estou chamando a tag javascript para ajudar 
+*/
+
+main section, main aside {
+    display: inline-block;
+}
