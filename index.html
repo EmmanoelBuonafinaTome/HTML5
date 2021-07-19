@@ -1,0 +1,51 @@
+<!DOCTYPE html> <!-- Indica que estamos trabalhando com HTML5. -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- Indica a codificação do documento -->
+    <meta name="keywords" content="HTML5, Dicas, Curso"> <!--
+        Esse meta era utilizado para ajudar o seu site ficar em primeiro nas busca, 
+        voce adicionava palavras chaves e ajuda os buscadores a diulgar seu site,
+        não é mais utilizado.
+    -->
+    <meta name="description" content="Aprendendo HTML5"> <!--
+        Esse meta já serve para dar uma descrição ao seu site.
+    -->
+    <meta name="author" content="Emmanoel Buonafina Tomé"> <!-- 
+        Esse meta é para o seu site ter o nome do autor nele.
+    -->
+    <meta name="robots" content="index, follow"> <!-- 
+        Esse meta já serve para robos indetificarem seu site, 
+        e content voce indica a as paginas que ele ira pesquisar.
+    -->
+    <!-- Existe mais meta para colocar no head do seu site. -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>document.createElement("myTag")</script> <!-- Criando uma tag javascript,
+        essa tag serve para ajudar buscadores mais antigos a entender o seu site.
+    -->
+    <style>
+        header, section, footer, nav, main, article, figure {
+        display: block;
+        }
+        myTag {
+            display: block;
+            background-color: #ddd;
+            padding: 50px;
+            font-size: 30px;
+        }
+        /*
+            Já esse style serve para mesma coisa, ajudar buscadores 
+            mais antigos a indentificar seu site,
+            e como podemos ver estou chamando a tag javascript para ajudar 
+        */
+    </style>
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!-- Já esse codigo em cima serve para ajudar tambem a buscadores antigos a identificar o HTML5-->
+    <title>Aprendendo HTML5</title>
+</head>
+<body>
+    <myTag>Testando</myTag> <!-- Chamando a tag e aplicando ela -->
+</body>
+</html>
